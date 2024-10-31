@@ -4,12 +4,12 @@
 
 import socket, signal
 
-signal.signal(signal.SIGINT, signal.SIG_D, signal
+signal.signal(signal.SIGINT, signal.SIG_DFL)
 
 address = "192.168.154.128"
 with socket.socket() as s:
     s.connect((address, 31337))
-
+    print('Para salir escribe "exit"')
     while True:
         command = input("Ingresa el comando: ")
         if command == "exit":
