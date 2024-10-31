@@ -26,7 +26,6 @@ with socket.socket() as s:
             except Exception as e:
                 print(f"\n!!Error {e}")
 
-            client.send(eject.encode())
+            client.send(output.encode())
 
     client.close()
-
